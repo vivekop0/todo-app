@@ -14,7 +14,7 @@ export async function DELETE(
       return new NextResponse("Unauthorized", { status: 401 });
     }
 
-    const task = await prisma.task.delete({
+    const task = await prisma.todo.delete({
       where: {
         id,
       },

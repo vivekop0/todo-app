@@ -26,7 +26,7 @@ export async function POST(req: Request) {
       });
     }
 
-    const task = await prisma.task.create({
+    const task = await prisma.todo.create({
       data: {
         title,
         description,
@@ -52,7 +52,7 @@ export async function GET(req: Request) {
       return NextResponse.json({ error: "Unauthorized", status: 401 });
     }
 
-    const tasks = await prisma.task.findMany({
+    const tasks = await prisma.todo.findMany({
       where: {
         userId,
       },
@@ -74,7 +74,7 @@ export async function PUT(req: Request) {
       return NextResponse.json({ error: "Unauthorized", status: 401 });
     }
 
-    const task = await prisma.task.update({
+    const task = await prisma.todo.update({
       where: {
         id,
       },
