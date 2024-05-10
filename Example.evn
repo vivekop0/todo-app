@@ -1,6 +1,8 @@
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=use your own CLERK_SECRET_KEY
 CLERK_SECRET_KEY=use your own CLERK_SECRET_KEY
 
+name this to .env.local
+aslo create another .env to give database url
 
 NEXT_PUBLIC_CLERK_SIGN_IN_URL =/signin
 NEXT_PUBLIC_CLERK_SIGN_UP_URL =/signup
